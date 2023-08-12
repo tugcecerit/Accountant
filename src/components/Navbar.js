@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="/anasayfa" className="text-xl font-bold text-gray-900">
+            <a href="/" className="text-xl font-bold text-gray-900">
               <img src={Logo} className='w-44' alt="Logo"></img>
             </a>
           </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className={`md:hidden ${showMenu ? 'block' : 'hidden'}`}>
-        <ul className="flex flex-col space-y-4">
+        <ul className="flex flex-col space-y-4 p-6">
           <li className="nav-link">
             <a
               href="/"
@@ -123,7 +123,7 @@ const Navbar = () => {
           </li>
           <li className="nav-link">
             <a
-              href="#"
+              href="/hizmetlerimiz"
               className="text-[#807f7f] hover:text-gray-400 transition"
             >
               HİZMETLERİMİZ
@@ -131,7 +131,7 @@ const Navbar = () => {
           </li>
           <li className="nav-link">
             <a
-              href="#"
+              href="/iletisim"
               className="text-[#807f7f] hover:text-gray-400 transition"
             >
               İLETİŞİM

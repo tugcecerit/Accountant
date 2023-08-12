@@ -2,6 +2,7 @@ import React from "react";
 import Home from "../components/HomeSection1"
 import CardsGrid from '../components/HomeSection2';
 import Links from '../components/HomeSection3'
+import Overview from "../components/HomeSection4";
 
 const Homepage = () => {
     return (
@@ -12,9 +13,13 @@ const Homepage = () => {
           <section id='section-2' className="w-full flex justify-center items-center">
             <CardsGrid />
           </section>
+          <section id='section-4' className="w-full flex justify-center items-center">
+            <Overview />
+          </section>
           <section id='section-3' className="w-full flex justify-center items-center">
             <Links />
           </section>
+
         </div>
       );
 }

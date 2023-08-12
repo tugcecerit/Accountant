@@ -10,23 +10,21 @@ const Footer = () => {
             <p className="text-xl font-bold">YELİZ TOPKAÇ</p>
             <p className="text-sm max-sm:hidden">Eti Mahallesi Strazburg Caddesi 40/3 Çankaya, Ankara</p>
             <p className="text-sm max-sm:hidden">0533 492 61 78</p>
-            <p className="text-sm max-sm:hidden"><b>Hafta İçi :</b> 09:00 - 18:00</p>
-            <p className="text-sm max-sm:hidden"><b>Cumartesi-Pazar:</b> Kapalı</p>
           </div>
           <div>
             <ul className="flex space-x-4">
               <li>
-                <a href="#" className="hover:text-gray-400 transition">
+                <a href="/hakkimizda" className="hover:text-gray-400 transition">
                   Hakkımızda
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-400 transition">
+                <a href="/hizmetlerimiz" className="hover:text-gray-400 transition">
                   Hizmetlerimiz
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-400 transition">
+                <a href="/iletisim" className="hover:text-gray-400 transition">
                   İletişim
                 </a>
               </li>

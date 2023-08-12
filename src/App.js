@@ -8,7 +8,7 @@ function App() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <Main />
-      <Footer />
+      <Footer className="mt-auto"/>
     </div>
   );
 }

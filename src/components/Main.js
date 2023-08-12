@@ -5,10 +5,10 @@ import About from '../pages/About'
 import Services from '../pages/Services'
 import Contact from '../pages/Contact'
 
-const App = () => {
+const Main = () => {
     return (
         <Router>
-            <main>
+            <main className="flex-grow">
                 <Routes>
                     <Route path="/" element={<Homepage />} />
                     <Route path="/hakkimizda" element={<About />} />
@@ -20,5 +20,5 @@ const App = () => {
     )
 }
 
-export default App;
+export default Main;
 

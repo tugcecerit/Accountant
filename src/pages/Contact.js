@@ -1,36 +1,48 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import emailjs from "emailjs-com"
 
 const Contact = () => {
-    const mapRef = useRef(null);
-
     useEffect(() => {
-        const mapOptions = {
-            center: { lat: 39.92740221853109, lng: 32.849458897116605 },
-            zoom: 15,
-        };
-
-        const map = new window.google.maps.Map(mapRef.current, mapOptions);
-
-        const marker = new window.google.maps.Marker({
-            position: mapOptions.center,
-            map: map,
-            title: "Your Location",
-        });
+        AOS.init();
     }, []);
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded shadow-md w-96">
-                <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+        <div className="flex justify-center items-center min-h-screen bg-white pt-16">
+            <div data-aos="zoom-in" data-aos-duration="3000" className="bg-white p-8 rounded w-3/4">
+                <h2 className="text-4xl font-semibold mb-6 text-yellow-700">İletişim</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="md:flex-col">
+                        <p><b className="text-yellow-800">ADRES:</b></p> 
+                        <p>Eti Mahallesi Strazburg Caddesi 40/3</p>
+                        <p>Çankaya, Ankara</p>
+                        <br></br>
+                    </div>
+                    <div className="md:flex-col">
+                        <p><b className="text-yellow-800">TELEFON:</b></p> 
+                        <p><b>Tel: </b>(0533) 492-6178</p>
+                        <p><b>Whatsapp: </b>(0533) 492-6178</p>
+                        <br></br>
+                    </div>
+                    <div className="md:flex-col">
+                        <p><b className="text-yellow-800">ÇALIŞMA SAATLERİ:</b></p> 
+                        <p><b>Hafta İçi: </b>09:00 - 18:00</p>
+                        <p><b>Hafta Sonu: </b>Kapalı</p>
+                        <br></br>
+                    </div>
+                </div>
+                <hr />
+                <br />
                 <form>
                      <div className="mb-4">
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">İsim</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             className="mt-1 p-2 border border-gray-300 rounded w-full"
-                            placeholder="Your Name"
+                            placeholder="İsminiz"
                         />
                     </div>
                     <div className="mb-4">
@@ -40,32 +52,28 @@ const Contact = () => {
                             id="email"
                             name="email"
                             className="mt-1 p-2 border border-gray-300 rounded w-full"
-                            placeholder="Your Email"
+                            placeholder="Emailiniz"
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Mesaj</label>
                         <textarea
                             id="message"
                             name="message"
                             rows="4"
                             className="mt-1 p-2 border border-gray-300 rounded w-full"
-                            placeholder="Your Message"
+                            placeholder="Mesajınız"
                         ></textarea>
                     </div>
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-700"
+                        className="bg-yellow-700 text-white py-2 px-4 rounded hover:bg-yellow-800 focus:outline-none focus:ring focus:border-gray-500"
                     >
-                        Send
+                        Gönder
                     </button>
                 </form>
+            <div/>
             </div>
-            <div
-                ref={mapRef}
-                className="w-96 h-64 mt-8 rounded shadow-md"
-                style={{ minHeight: "300px" }}
-            />
         </div>
     );
 };

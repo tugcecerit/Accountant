@@ -19,7 +19,7 @@ const Links = () => {
       }, [])
     return(
     <section>
-        <h1 className="text-4xl font-bold p-10">Baglantilar</h1>
+        <h1 className="text-4xl font-bold p-10 text-yellow-700">Baglantilar</h1>
         <div className="flex flex-wrap justify-center items-center pb-10">
         <a data-aos="flip-right"  className="flex justify-center items-center" href="http://www.gib.gov.tr/" target="_blank"><img src={Gib} className="w-50 sm:w-1/2"></img></a>
         <a data-aos="flip-right" className="flex justify-center items-center" href="https://www.sgk.gov.tr/" target="_blank"><img src={Sgk} className="w-50 sm:w-1/2"></img></a>
@@ -32,7 +32,7 @@ const Links = () => {
         <a data-aos="flip-right" className="flex justify-center items-center" href="https://www.iskur.gov.tr/" target="_blank"><img src={Iskur} className="w-50 sm:w-1/2"></img></a>
         <a data-aos="flip-right" className="flex justify-center items-center" href="https://www.atonet.org.tr/" target="_blank"><img src={Ato} className="w-50 sm:w-1/2"></img></a>
         </div>
-        <h1 className="text-4xl font-bold p-10">Faydalı Linkler</h1>
+        <h1 className="text-4xl font-bold p-10 text-yellow-700">Faydalı Linkler</h1>
         <div className="flex flex-wrap justify-center items-center pb-10">
         <a className="flex justify-center items-center px-10 py-2 w-70 m-2 font-bold border rounded-md shadow-md hover:bg-zinc-100" href="https://www.tcmb.gov.tr/kurlar/kurlar_tr.html" target="_blank">Merkez Bankası Kurları</a>
         <a className="flex justify-center items-center px-10 py-2 w-70 m-2 font-bold border rounded-md shadow-md hover:bg-zinc-100" href="https://www.iskur.gov.tr/isveren/tesvikler/" target="_blank">İŞKUR Teşvikleri</a>
