@@ -10,20 +10,18 @@ const Contact = () => {
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-white pt-16">
-            <div data-aos="zoom-in" data-aos-duration="3000" className="bg-white p-8 rounded w-3/4">
+            <div data-aos="zoom-in" data-aos-duration="3000" className="bg-white rounded w-3/4">
                 <h2 className="text-4xl font-semibold mb-6 text-yellow-700">İletişim</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="md:flex-col">
                         <p><b className="text-yellow-800">ADRES:</b></p> 
                         <p>Eti Mahallesi Strazburg Caddesi 40/3</p>
                         <p>Çankaya, Ankara</p>
-                        <br></br>
                     </div>
                     <div className="md:flex-col">
-                        <p><b className="text-yellow-800">TELEFON:</b></p> 
-                        <p><b>Tel: </b>(0533) 492-6178</p>
-                        <p><b>Whatsapp: </b>(0533) 492-6178</p>
-                        <br></br>
+                        <p><b className="text-yellow-800">TELEFON & EMAIL:</b></p> 
+                        <p><b>Tel-Whatsapp: </b>(0533) 492-6178</p>
+                        <p><b>Email: </b>topkacyeliz@gmail.com</p>
                     </div>
                     <div className="md:flex-col">
                         <p><b className="text-yellow-800">ÇALIŞMA SAATLERİ:</b></p> 

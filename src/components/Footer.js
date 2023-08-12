@@ -10,6 +10,7 @@ const Footer = () => {
             <p className="text-xl font-bold">YELİZ TOPKAÇ</p>
             <p className="text-sm max-sm:hidden">Eti Mahallesi Strazburg Caddesi 40/3 Çankaya, Ankara</p>
             <p className="text-sm max-sm:hidden">0533 492 61 78</p>
+            <p className="text-sm max-sm:hidden">topkacyeliz@gmail.com</p>
           </div>
           <div>
             <ul className="flex space-x-4">

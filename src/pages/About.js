@@ -9,7 +9,7 @@ const About = () => {
         AOS.init();
       }, [])
     return (
-        <div data-aos="fade-down" data-aos-duration="3000" className="flex flex-col sm:flex-row justify-center items-center mx-auto max-w-7xl overflow-hidden p-10 pt-20">
+        <div data-aos="fade-down" data-aos-duration="3000" className="flex flex-col sm:flex-row justify-center items-center mx-auto max-w-7xl overflow-hidden pt-20">
             <div className="w-full sm:w-1/2 order-2 sm:order-1 p-12 text-justify italic leading-7">
                 <h1 className="text-xl font-bold pb-5 text-yellow-700">Serbest Muhasebeci Mali Müşavir Yeliz Topkaç</h1>
                 <p>SMMM Yeliz Topkaç, 2004 yılında Gaziantep Üniversitesi İktisadi ve İdari Bilimler Fakültesi İktisat bölümünden mezun oldu. 2006 yılında Dicle Üniversitesi Hukuk Fakültesi'nde bir yıl süresince özel öğrenci statüsünde eğitim alarak sertifikasını tamamladı. Ardından çeşitli mesleki kurslara ve panellere katılarak kendini sürekli geliştirmeyi amaçladı.</p>

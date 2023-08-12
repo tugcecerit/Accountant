@@ -19,7 +19,7 @@ const Links = () => {
       }, [])
     return(
     <section>
-        <h1 className="text-4xl font-bold p-10 text-yellow-700">Baglantilar</h1>
+        <h1 className="text-4xl font-bold p-10 text-yellow-700">Bağlantılar</h1>
         <div className="flex flex-wrap justify-center items-center pb-10">
         <a data-aos="flip-right"  className="flex justify-center items-center" href="http://www.gib.gov.tr/" target="_blank"><img src={Gib} className="w-50 sm:w-1/2"></img></a>
         <a data-aos="flip-right" className="flex justify-center items-center" href="https://www.sgk.gov.tr/" target="_blank"><img src={Sgk} className="w-50 sm:w-1/2"></img></a>
