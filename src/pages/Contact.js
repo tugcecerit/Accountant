@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import emailjs from "emailjs-com"
@@ -7,6 +7,43 @@ const Contact = () => {
     useEffect(() => {
         AOS.init();
     }, []);
+
+    const form = useRef();
+    const [isMessageSent, setIsMessageSent] = useState(false);
+    const [isButtonClicked, setIsButtonClicked] = useState(false);
+
+    const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5pkhz0f",
+        "template_l2o8a59",
+        form.current,
+        "mjYwgjjB9cexO1zBW"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsMessageSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const closeModal = () => {
+    setIsMessageSent(false);
+    window.location.reload();
+  };
+
+  const handleClick = () => {
+    setIsButtonClicked(true);
+    setTimeout(() => {
+      setIsButtonClicked(false);
+    }, 500);
+  };
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-white pt-16">
@@ -32,13 +69,17 @@ const Contact = () => {
                 </div>
                 <hr />
                 <br />
-                <form>
+                <form
+                    ref={form}
+                    onSubmit={sendEmail}
+                    >
                      <div className="mb-4">
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700">İsim</label>
                         <input
                             type="text"
                             id="name"
-                            name="name"
+                            name="from_name"
+                            value={form.name}
                             className="mt-1 p-2 border border-gray-300 rounded w-full"
                             placeholder="İsminiz"
                         />
@@ -48,7 +89,7 @@ const Contact = () => {
                         <input
                             type="email"
                             id="email"
-                            name="email"
+                            name="reply_to"
                             className="mt-1 p-2 border border-gray-300 rounded w-full"
                             placeholder="Emailiniz"
                         />
@@ -65,11 +106,30 @@ const Contact = () => {
                     </div>
                     <button
                         type="submit"
-                        className="bg-yellow-700 text-white py-2 px-4 rounded hover:bg-yellow-800 focus:outline-none focus:ring focus:border-gray-500"
+                        value='Gonder'
+                        className={`bg-yellow-700 text-white py-2 px-4 rounded hover:bg-yellow-800 focus:outline-none focus:ring focus:border-gray-500 ${isButtonClicked ? "button-clicked" : ""}`}
+                        onClick={handleClick}
+                        whileHover={{ scale: 1.01 }}
+                        whileTap={{ scale: 0.95 }}
                     >
                         Gönder
                     </button>
                 </form>
+                {isMessageSent && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+          <div className="bg-gray-200 shadow-2xl p-8 rounded-lg">
+            <h2 className="text-xl text-[#666666] font-bold mb-4">Mesajınız gönderildi!</h2>
+            <p className="text-m text-[#666666]">İsteğiniz iletildi, size en kısa zamanda dönüş yapacağız.</p>
+            <button
+              onClick={closeModal}
+              className="mt-4 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-[#d6aecd]-600"
+            >
+              Kapat
+            </button>
+          </div>
+        </div>
+      )}
+
             <div/>
             </div>
         </div>
